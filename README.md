@@ -27,22 +27,22 @@ Then again in the Dashboard, go to **Mandrill Mailer** and enter your API key an
 First create a message using the `MandrillMessage` class
 
 ```php
-	# Create a MandrillMessage object and set the subject, from, to, contents, attachments, etc.
-	$message = MandrillMessage::newInstance()
-		->setSubject('Test')
-		->setFrom( array('test@mailinator.com' => 'Me') )
-		->setTo( array('test@mailinator.com' => 'Me') )
-		->setTemplate(get_template_directory() . '/templates/mailing/default.mailing.html')
-		->setImages(array('email_header' => get_template_directory() . '/images/mailing/header.jpg'))
-		->setAttachments(array('Test.pdf' => get_template_directory() . '/files/test.pdf'))
-		->setReplacements(array('%email-footer%' => 'Test'))
-		->setContents('<h2>Hey you</h2>');
+# Create a MandrillMessage object and set the subject, from, to, contents, attachments, etc.
+$message = MandrillMessage::newInstance()
+	->setSubject('Test')
+	->setFrom( array('test@mailinator.com' => 'Me') )
+	->setTo( array('test@mailinator.com' => 'Me') )
+	->setTemplate(get_template_directory() . '/templates/mailing/default.mailing.html')
+	->setImages(array('email_header' => get_template_directory() . '/images/mailing/header.jpg'))
+	->setAttachments(array('Test.pdf' => get_template_directory() . '/files/test.pdf'))
+	->setReplacements(array('%email-footer%' => 'Test'))
+	->setContents('<h2>Hey you</h2>');
 ```
 
 Then just send your message:
 
 ```php
-	MandrillMailer::send($message);
+MandrillMailer::send($message);
 ```
 
 The function will either return `TRUE` if the mail was sent successfully and `FALSE` otherwise.
