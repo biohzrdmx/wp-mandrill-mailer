@@ -1,0 +1,1 @@
+_Put the contents of the `src` folder from the Mandrill PHP SDK here_
