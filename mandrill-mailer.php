@@ -4,8 +4,8 @@
 	 * Description: Send transactional email using Mandrill easily and without hassle
 	 * Author: biohzrdmx
 	 * Version: 1.0
-	 * Plugin URI: http://github.com/biohzrdmx/
-	 * Author URI: http://github.com/biohzrdmx/wp-mandrill-mailer
+	 * Plugin URI: http://github.com/biohzrdmx/wp-mandrill-mailer
+	 * Author URI: http://github.com/biohzrdmx/
 	 */
 
 	if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
